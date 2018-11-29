@@ -26,6 +26,22 @@ SoftwareSerial BG96_AT(10,9); // RX, TX - 9600 baud rate
 #define AP_READY 7
 #define RING_INDICATOR 8
 
+/*
+ * set echo off: ATE0
+ * err loglvl 2: AT+CMEE=2
+ * get sim stat: AT+QSIMSTAT?
+ * check sim:    AT+CPIN?
+ * operator:     AT+COPS?
+ * get net reg:  AT+CREG?
+ * connect apn:  AT+QICSGP=1,1,"hologram", "", "", 1
+ * activate ctx: AT+QIACT=1
+ * query ctx:    AT+QIACT?
+ * disconnect:   AT+QIDEACT=1
+ * tcp connect:  AT+QIOPEN=1,1,"TCP","220.180.239.201",8713,0,0
+ * power down:   AT+QPOWD
+ 
+ */
+
 
 
 // baud rate used for both Serial ports
